@@ -37,6 +37,7 @@
                                         </div>
                     </div>
                 </section>
+
                 <section class="bg-mix py-3">
                 <div class="container">
                     <div class="card rounded-0">
@@ -77,8 +78,8 @@
                     </div>
                 </div>
               </section>
-
-              section>
+            
+              <section>
                   <div class="container">
                       <div class="row">
                           
@@ -154,8 +155,6 @@
                                 </div>
                             </div>
 
-
-                            
                             <!-- parte de gastos pagados-->
                           </div>
                             <div class="col-lg-4 my-3">
@@ -212,3 +211,103 @@
                                           <small class="d-block text-muted">ver</small>
                                         </div>
                                     </div>
+
+                                   
+                                    
+                                    
+                                    <button class="btn btn-primary w-100">Ver Mas</button>
+                                </div>
+                            </div>
+
+                            <!-- fecha limite de pago-->
+                            </div>
+                            <div class="col-lg-4 my-3">
+                            <div class="card rounded-0">
+                                <div class="card-header bg-light">
+                                    <h6 class="font-weight-bold mb-0">Fecha limite de pago</h6>
+                                </div>
+                                <div class="card-body pt-2">
+                                    <div class="d-flex border-bottom py-2">
+                                        <div class="d-flex mr-3">
+                                         
+                                        </div>
+                                        <div class="align-self-center">
+                                        <h3 class="font-weight-bold">30 / mayo / 2021</h3>
+                                        <h6 class="d-inline-block mb-0">104.000</h6><span class="badge badge-warning ml-2">por pagar</span>
+                                         
+                                        </div>
+                                    </div>
+
+                                    
+                                    
+                                    <button class="btn btn-primary w-100">Ver Mas</button>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="card rounded-0">
+                                  <div class="card-header bg-light">
+                                    <h6 class="font-weight-bold mb-0">pago de gastos comunes Historico</h6>
+                                  </div>
+                                  <div class="card-body">
+                                    <canvas id="myChart" width="300" height="150"></canvas>
+                                  </div>
+                              </div>
+
+                      </div>
+                      </div>
+                      
+                  </div>
+            
+                  
+              </section>
+
+        </div>
+
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
+        <script>
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var myChart = new Chart(ctx, { 
+                type: 'bar',
+                data: {
+                    labels: ['Feb 2020', 'Mar 2020', 'Abr 2020', 'May 2020'],
+                    datasets: [{
+                        label: 'Nuevos equipos',
+                        data: [50, 100, 150, 200],
+                        backgroundColor: [
+                            '#12C9E5',  
+                            '#12C9E5',
+                            '#12C9E5',
+                            '#111B54'
+                        ],
+                        maxBarThickness: 30,
+                        maxBarLength: 2
+                    }]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    }
+                }
+            });
+            </script>
+</body>
+
+</html>
