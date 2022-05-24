@@ -7,13 +7,13 @@
                 <a href="../" class="d-block text-light p-3 border-0"><i class="fas fa-tachometer-alt"></i>
                     Inicio</a>
                     
-                    <a href="/edifred/proyecto/login/login.php" class="d-block text-light p-3 border-0"><i class="fas fa-tachometer-alt"></i>
+                    <a href="/edifred2/grupo06/login/login2.php" class="d-block text-light p-3 border-0"><i class="fas fa-tachometer-alt"></i>
                     login</a>
 
-                <a href="/edifred/proyecto/partes/detallegastos.php" class="d-block text-light p-3 border-0"><i class="fas fa-users"></i>
+                <a href="/edifred2/grupo06/partes/detallegastos.php" class="d-block text-light p-3 border-0"><i class="fas fa-users"></i>
                     Usuarios</a>
 
-                <a href="/edifred/proyecto/partes/administrador.php" class="d-block text-light p-3 border-0"><i class="fas fa-drumstick-bite"></i>
+                <a href="/edifred2/grupo06/partes/administrador.php" class="d-block text-light p-3 border-0"><i class="fas fa-drumstick-bite"></i>
                     Administrador</a>
 
                 <a href="../" class="d-block text-light p-3 border-0"><i class="fas fa-drumstick-bite"></i>
