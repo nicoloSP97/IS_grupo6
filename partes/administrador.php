@@ -19,6 +19,70 @@
         <div id="content" class="bg-grey w-100">
 
             
+        <section class="bg-light py-3">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-9 col-md-8">
+                                <h1 class="font-weight-bold mb-0">Bienvenido Administrador</h1>
+                                
+                                <p class="lead text-muted">Revisa la última información de los gastos comunes de los usuarios</p>
+                            </div>
+                            <div class="col-lg-3 col-md-4 d-flex">
+                                <button class="btn btn-primary w-100 align-self-center">Fechas por vencer</button>
+                            </div>
+                        </div>
+                        <div class="align-self-center">
+                                          <h6 class="d-inline-block mb-0">formato </h6><span class="badge badge-info ml-2">detalles generales</span>
+                                          
+                                        </div>
+                    </div>
+                </section>
+
+                <section class="bg-mix py-3">
+                <div class="container">
+                    <div class="card rounded-0">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-6 d-flex stat my-3">
+                                    <div class="mx-auto">
+                                        <h6 class="text-muted">No han pagado </h6>
+                                        <h3 class="font-weight-bold">50 </h3>
+                                        <h4>personas  <span class="badge badge-danger">No pago</span></h4>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 d-flex stat my-3">
+                                    <div class="mx-auto">
+                                        <h6 class="text-muted">Por Pagar </h6>
+                                        <h3 class="font-weight-bold">70 </h3>
+                                        <h4>personas  <span class="badge badge-warning">por pagar</span></h4>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 d-flex stat my-3">
+                                    <div class="mx-auto">
+                                        <h6 class="text-muted">al dia</h6>
+                                        <h3 class="font-weight-bold">70 </h3>
+                                        <h4>personas <span class="badge badge-success">pagado</span> </h4>
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="col-lg-3 col-md-6 d-flex my-3">
+                                    <div class="mx-auto">
+                                        <h6></h6>
+                                    <div>
+                                    <h6 class="text-muted">fecha</h6>
+                                        <h1 class="font-weight">25-08-2022</h1>
+                                    </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </section>
                   
               </section>
 
