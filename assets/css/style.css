@@ -97,7 +97,7 @@ a:hover {
   .form-login {
     width: 400px;
     height: auto;
-    background: #d1d1d1;
+    background: #111B54;
     margin: auto;
     margin-top: 180px;
     box-shadow: 7px 13px 37px #000;
@@ -117,7 +117,7 @@ a:hover {
   
   .controls {
     width: 100%;
-    border: 1px solid #017bab;
+    border: 1px solid #111B54;
     margin-bottom: 15px;
     padding: 11px 10px;
     background: #ffffff;
