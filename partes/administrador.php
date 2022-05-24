@@ -136,6 +136,26 @@
                             </div>
 
                             
+                            <button class="btn btn-primary w-100">Ver Mas</button>
+                                </div>
+                            </div>
+                            <!--fin de cuadro -->
+
+                            <!-- fecha limite de pago-->
+                            
+                            <br>
+                            <div class="card rounded-0">
+                                  <div class="card-header bg-light">
+                                    <h6 class="font-weight-bold mb-0">pago de gastos comunes Historico</h6>
+                                  </div>
+                                  <div class="card-body">
+                                    <canvas id="myChart" width="300" height="150"></canvas>
+                                    <div>
+                                    <form>
+                                        <a href="/edifred/proyecto/partes/graficohistorico.php">
+                                        <input type="button" class="btn btn-primary w-100" value="ver registro">
+                                         </a>
+                                    </form>
             </div>
 
         </div>
