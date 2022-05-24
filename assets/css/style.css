@@ -97,12 +97,12 @@ a:hover {
   .form-login {
     width: 400px;
     height: auto;
-    background: #35aac7;
+    background: #d1d1d1;
     margin: auto;
     margin-top: 180px;
     box-shadow: 7px 13px 37px #000;
     padding: 20px 30px;
-    border-top: 4px solid #92ab01;
+    border-top: 4px solid #016dab;
     color: white;
   }
   
