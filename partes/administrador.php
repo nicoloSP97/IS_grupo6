@@ -86,6 +86,56 @@
                   
               </section>
 
+
+              <!-- personas no pago-->
+              <div class="card rounded-0">
+                                <div class="card-header bg-light">
+                                    <h6 class="font-weight-bold mb-0">Personas Atrasadas</h6>
+                                </div>
+                                <div class="card-body pt-2">
+
+                                <div class="d-flex border-bottom py-2">
+                                        <div class="d-flex mr-3">
+                                         
+                                        </div>
+                                        <div class="align-self-center">
+                                        <h6 class="d-inline-block mb-0">Mario faundez</h6><span class="badge badge-danger ml-2">No pago</span>
+                                        <h6>Dpto N° 201</h6>
+                                          <small class="d-block text-muted">ver</small>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex border-bottom py-2">
+                                        <div class="d-flex mr-3">
+                                         
+                                        </div>
+                                        <div class="align-self-center">
+                                        <h6 class="d-inline-block mb-0">Mario faundez</h6><span class="badge badge-danger ml-2">No pago</span>
+                                        <h6>Dpto N° 201</h6>
+                                          <small class="d-block text-muted">ver</small>
+                                        </div>
+                                    </div>
+
+                                <!--usuario-->
+                                    <div class="d-flex border-bottom py-2">
+                                        <div class="d-flex mr-3">
+                                         
+                                        </div>
+                                        <div class="align-self-center">
+                                        <h6 class="d-inline-block mb-0">Mario faundez</h6><span class="badge badge-danger ml-2">No pago</span>
+                                        <h6>Dpto N° 201</h6>
+                                          <small class="d-block text-muted">ver</small>
+                                        </div>
+                                    </div> 
+
+
+                                    <!--usuario-->
+                                    
+                                    <button class="btn btn-primary w-100">Pagar</button>
+                                </div>
+                            </div>
+
+                            
             </div>
 
         </div>
