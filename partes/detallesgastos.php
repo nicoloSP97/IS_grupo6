@@ -153,3 +153,62 @@
                                     <button class="btn btn-primary w-100">Pagar</button>
                                 </div>
                             </div>
+
+
+                            
+                            <!-- parte de gastos pagados-->
+                          </div>
+                            <div class="col-lg-4 my-3">
+                            <div class="card rounded-0">
+                                <div class="card-header bg-light">
+                                    <h6 class="font-weight-bold mb-0">gastos pagados mensualmente</h6>
+                                </div>
+                                <div class="card-body pt-2">
+                                    <div class="d-flex border-bottom py-2">
+                                        <div class="d-flex mr-3">
+                                         
+                                        </div>
+                                        <div class="align-self-center">
+                                        <h6 class="d-inline-block mb-0">Enero</h6><span class="badge badge-success ml-2">gastos pagados</span>
+                                          <small class="d-block text-muted">ver</small>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex border-bottom py-2">
+                                        <div class="d-flex mr-3">
+                                          
+                                        </div>
+                                        <div class="align-self-center">
+                                          <h6 class="d-inline-block mb-0">Febrero</h6><span class="badge badge-success ml-2">gastos pagados</span>
+                                          <small class="d-block text-muted">ver</small>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex border-bottom py-2">
+                                        <div class="d-flex mr-3">
+                                          
+                                        </div>
+                                        <div class="align-self-center">
+                                          <h6 class="d-inline-block mb-0">Marzo</h6><span class="badge badge-success ml-2">gastos pagados</span>
+                                          <small class="d-block text-muted">ver</small>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex border-bottom py-2">
+                                        <div class="d-flex mr-3">
+                                       
+                                        </div>
+                                        <div class="align-self-center">
+                                          <h6 class="d-inline-block mb-0">Abril</h6><span class="badge badge-success ml-2">gastos pagados</span>
+                                          <small class="d-block text-muted">ver</small>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex border-bottom py-2">
+                                        <div class="d-flex mr-3">
+                                      
+                                        </div>
+                                        <div class="align-self-center">
+                                        <h6 class="d-inline-block mb-0">Mayo</h6><span class="badge badge-warning ml-2">por pagar</span>
+                                          <small class="d-block text-muted">ver</small>
+                                        </div>
+                                    </div>
