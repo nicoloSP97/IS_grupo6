@@ -16,8 +16,8 @@
                 <a href="/edifred2/grupo06/partes/administrador.php" class="d-block text-light p-3 border-0"><i class="fas fa-drumstick-bite"></i>
                     Administrador</a>
 
-                <a href="/edifred2/grupo06/inicio/index.php" class="d-block text-light p-3 border-0"><i class="fas fa-drumstick-bite"></i>
-                Gastos Comunes</a>
+                <a href="/edifred2/grupo06/login/registrar.php" class="d-block text-light p-3 border-0"><i class="fas fa-drumstick-bite"></i>
+                Registrar</a>
 
                 <a href="/edifred2/grupo06/inicio/index.php" class="d-block text-light p-3 border-0"><i class="fas fa-drumstick-bite"></i>
                 Despachos </a>

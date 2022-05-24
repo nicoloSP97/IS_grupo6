@@ -13,7 +13,17 @@
       <input class="controls" type="numb" name="rut" value="" placeholder="Rut">
       <input class="controls" type="password" name="contrasena" value="" placeholder="Contraseña">
       <input class="buttons" type="submit" name="" value="Ingresar">
+       <!--boton de registro h ref-->
+       <form>
+            <a href="/edifred2/grupo06/login/registrar.php">
+                <input type="button" class="btn btn-primary w-100" value="Registrar">
+             </a>
+        </form>
+      <!--boton de registro h ref-->
+
       <p><a href="#">¿Olvidastes tu Contraseña?</a></p>
+
+     
 
     </section>
 
