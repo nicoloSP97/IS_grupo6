@@ -268,7 +268,7 @@
                                     <canvas id="myChart" width="300" height="150"></canvas>
                                     <div>
                                     <form>
-                                        <a href="/edifred2/grupo06/partes/graficohistorico.php">
+                                        <a href="/grupo06/partes/graficohistorico.php">
                                         <input type="button" class="btn btn-primary w-100" value="ver registro">
                                          </a>
                                     </form>

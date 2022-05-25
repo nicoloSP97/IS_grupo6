@@ -1,15 +1,12 @@
 <?php
+$db_host="localhost";
+$db_user="root";
+$db_pass="";
+$db_name="base1";
+$con=mysqli_connect($db_host,$db_user,$db_pass,$db_name);
 
-$servername = "146.83.194.142:1125";
-$username = "usuario6";
-$password = "U@er6";
-
-$conn = new mysqli($servername, $username, $password);
-
-if($conn->connect_error){
+if($con->connect_error){
     die("falló la conexión: " . $conn->connect_error);
 }
-
 echo "Conexión satisfactoria."
-
 ?>

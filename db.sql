@@ -1,0 +1,2 @@
+-- Creacion de 4 departamento que son :101, 102,201,202 estos son parte del edificio 01
+-- insert into departamento values (101,01),(102,01),(201,01),(202,01);

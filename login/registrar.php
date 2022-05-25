@@ -9,12 +9,15 @@
     <section class="form-login">
       <h5>Registrate</h5>
       <h2 class="encabezado"> Bienvenido EDIFRED</h2>
+      <form action="" method="post">
       <input class="controls" type="text" name="nombre" value="" placeholder="Nombre">
+      <input class="controls" type="text" name="apellido" value="" placeholder="apellido">
       <input class="controls" type="numb" name="rut" value="" placeholder="Rut">
       <input class="controls" type="numb" name="dpto" value="" placeholder="Numero de departamento">
       <!--  <input class="controls" type="email" name="email" value="" placeholder="Email">  -->
       <input class="controls" type="password" name="contrasena" value="" placeholder="Contraseña">
       <input class="buttons" type="submit" name="" value="Registrar">
+      </form>
       
       <p><a href="#">¿Olvidastes tu Contraseña?</a></p>
 
