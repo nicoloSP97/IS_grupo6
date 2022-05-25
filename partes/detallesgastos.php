@@ -233,7 +233,7 @@
                                         </div>
                                         <div class="align-self-center">
                                         <h3 class="font-weight-bold">30 / mayo / 2021</h3>
-                                        <h6 class="d-inline-block mb-0">104.000</h6><span class="badge badge-warning ml-2">por pagar</span>
+                                        <h6 class="d-inline-block mb-0"></h6><span class="badge badge-warning ml-2">por pagar</span>
                                          
                                         </div>
                                     </div>
