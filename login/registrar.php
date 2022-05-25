@@ -9,7 +9,7 @@
     <section class="form-login">
       <h5>Registrate</h5>
       <h2 class="encabezado"> Bienvenido EDIFRED</h2>
-      <form action="" method="post">
+      <form action="..\bdd\realizar_registro.php" method="post">
       <input class="controls" type="text" name="nombre" value="" placeholder="Nombre">
       <input class="controls" type="text" name="apellido" value="" placeholder="apellido">
       <input class="controls" type="numb" name="rut" value="" placeholder="Rut">
