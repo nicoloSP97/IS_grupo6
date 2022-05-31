@@ -1,10 +1,21 @@
+ <?php
+ include("../bdd/bdd.php");
+ session_start();
+ $rut=$_SESSION['rut'];
+ echo "bienvenido".$rut;
+ $consultaRegistroSql="SELECT * FROM usuario where rut=$rut";
+ $consultaRegistro=mysqli_query($con, $consultaRegistroSql);
+ $reg = mysqli_fetch_array($consultaRegistro);
+ echo $reg['nombre'];
+ ?>
+ 
  <!-- head -->
  <?php include('../partes/head.php') ?>
     <!-- fin head -->
 
 
-<body>
-    <div class="d-flex" id="content-wrapper">
+<body>   
+<div class="d-flex" id="content-wrapper">
     <!-- sideBar -->
     <?php include('../partes/sidebar.php') ?>
     <!-- fin sideBar -->
@@ -22,7 +33,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-9 col-md-8">
-                                <h1 class="font-weight-bold mb-0">Bienvenido Juan</h1>
+                                <h1 class="font-weight-bold mb-0">Bienvenido <?php echo $reg['nombre']?></h1>
                                 <h2 class="font-weight-bold mb-0">Dpto N° 201</h2>
                                 
                                 <p class="lead text-muted">Revisa la última información</p>
