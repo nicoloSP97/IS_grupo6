@@ -16,7 +16,8 @@ else{
 <?php
 include '..\login\login2.php';
 ?>
-<h2 style="color: red; text-align:center">Rut y/o contraseña incorrectas</h2>
+<h2 style="color: red; text-align:center">Rut y/o C ontraseña incorrectas</h2>
+
 <?php
 }
 
