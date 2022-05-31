@@ -11,5 +11,12 @@ if($array['contar']>0){
     $_SESSION['rut']=$rut;
 header("Location:..\partes\detallesgastos.php");
 }
-
+else{
 ?>
+<?php
+include '..\login\login2.php';
+?>
+<h2 style="color: red; text-align:center">Rut y/o contraseña incorrectas</h2>
+<?php
+}
+
