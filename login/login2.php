@@ -7,7 +7,7 @@ include("../bdd/bdd.php");
   <head>
     <meta charset="utf-8">
     <title> Login</title>
-    <link rel="stylesheet" href="../assets/css/stylee.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
   </head>
   <body>
     <section class="form-login">

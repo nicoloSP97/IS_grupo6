@@ -43,8 +43,7 @@
                             </div>
                         </div>
                         <div class="align-self-center">
-                                          <h6 class="d-inline-block mb-0">Estado de deudas</h6><span class="badge badge-warning ml-2">por pagar</span>
-                                          
+                                          <h6 class="d-inline-block mb-0">Estado de deudas</h6><span class="badge badge-warning ml-2">por pagar</span>                           
                                         </div>
                     </div>
                 </section>

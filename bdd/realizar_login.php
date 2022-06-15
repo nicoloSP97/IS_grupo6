@@ -6,7 +6,6 @@ $pass=$_POST['contrasena'];
 $q = "SELECT count(*) as contar from usuario where rut ='$rut' and pass='$pass'";
 $consulta=mysqli_query($con,$q);
 $array=mysqli_fetch_array($consulta);
-echo "resultados = ".$array['contar'];
 if($array['contar']>0){
     $_SESSION['rut']=$rut;
 header("Location:..\partes\detallesgastos.php");
@@ -16,7 +15,7 @@ else{
 <?php
 include '..\login\login2.php';
 ?>
-<h2 style="color: red; text-align:center">Rut y/o C ontraseña incorrectas</h2>
+<h2 style="color: red; text-align:center">Rut y/o Contraseña incorrectas</h2>
 
 <?php
 }

@@ -3,12 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title> Login</title>
-    <link rel="stylesheet" href="../assets/css/stylee.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
   </head>
   <body>
     <section class="form-login">
       <h5>Registrate</h5>
-      <h2 class="encabezado"> Bienvenido EDIFRED</h2>
       <form action="..\bdd\realizar_registro.php" method="post">
       <input class="controls" type="text" name="nombre" value="" placeholder="Nombre">
       <input class="controls" type="text" name="apellido" value="" placeholder="apellido">
