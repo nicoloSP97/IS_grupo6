@@ -10,7 +10,7 @@
     <!-- fin sideBar -->
 
         <div class="w-100">
-
+    <?php $nombre=""?>
     <!-- Navbar -->
         <?php include('../partes/nav.php') ?>
     <!-- Fin Navbar -->
