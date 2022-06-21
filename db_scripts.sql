@@ -29,3 +29,10 @@ Creacion de 4 departamento que son :101,102,201,202 estos son parte del edificio
 definiendo roles en tabla tipo_usuario
     insert INTO tipo_usuario(cod_usuario,rol_usuario) values(11,'administrador');
     insert INTO tipo_usuario(cod_usuario,rol_usuario) values(22,'arrendatario');
+
+creacion de condominio:
+CREATE TABLE condominio( id_condominio int, PRIMARY KEY (id_condominio) );
+
+extras:
+ALTER TABLE departamento add id_condominio int;
+ALTER TABLE departamento ADD FOREIGN KEY (id_condominio) REFERENCES condominio(id_condominio);
