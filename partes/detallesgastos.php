@@ -2,10 +2,18 @@
  include("../bdd/bdd.php");
  session_start();
  $rut=$_SESSION['rut'];
- $consultaRegistroSql="SELECT * FROM usuario where rut=$rut";
+ $consultaRegistroSql="SELECT * FROM usuario u,habita h where u.rut=$rut and u.rut=h.rut";
  $consultaRegistro=mysqli_query($con, $consultaRegistroSql);
  $reg = mysqli_fetch_array($consultaRegistro);
  $nombre=$reg['nombre'];
+ $id_depa=$reg['id_depa'];
+//consulta sobre detalles de gasto
+$consultadetallesSql= "SELECT * FROM departamento d, pago_gasto p, gasto_comun g
+where d.id_depa=$id_depa and d.id_depa=p.id_depa and p.cod_gasto=g.cod_gasto";
+$consultadetalles=mysqli_query($con,$consultadetallesSql);
+$resultado=mysqli_fetch_array($consultadetalles);
+
+$monto_total = $resultado['monto_luz'] + $resultado['monto_agua'] + $resultado['monto_gas'] + $resultado['monto_otros'];
 ?>
  
  <!-- head -->
@@ -33,8 +41,8 @@
                         <div class="row">
                             <div class="col-lg-9 col-md-8">
                                 <h1 class="font-weight-bold mb-0">Bienvenido <?php echo $nombre ?></h1>
-                                <h2 class="font-weight-bold mb-0">Dpto N° 201</h2>
-                                
+                                <h2 class="font-weight-bold mb-0">Dpto N° <?php echo $id_depa?></h2>
+                                <h3><?php echo "fdsa"?></h3>
                                 <p class="lead text-muted">Revisa la última información</p>
                             </div>
                             <div class="col-lg-3 col-md-4 d-flex">
@@ -42,7 +50,7 @@
                             </div>
                         </div>
                         <div class="align-self-center">
-                                          <h6 class="d-inline-block mb-0">Estado de deudas</h6><span class="badge badge-warning ml-2">por pagar</span>                           
+                                          <h6 class="d-inline-block mb-0">Estado de deudas</h6><span class="badge badge-warning ml-2"><?php echo $resultado['estado_pago']?></span>                           
                                         </div>
                     </div>
                 </section>
@@ -55,22 +63,22 @@
                                 <div class="col-lg-3 col-md-6 d-flex stat my-3">
                                     <div class="mx-auto">
                                         <h6 class="text-muted">Luz</h6>
-                                        <h3 class="font-weight-bold">16.000</h3>
-                                        <h6 class="text-success"><i class="icon ion-md-arrow-dropup-circle"></i> 83.3%</h6>
+                                        <h3 class="font-weight-bold"><?php echo $resultado['monto_luz']?></h3>
+                                        <h6 class="text-success"><i class="icon ion-md-arrow-dropup-circle"></i> <?php echo round((100*$resultado['monto_luz'])/$monto_total, 1)?>%</h6>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-6 d-flex stat my-3">
                                     <div class="mx-auto">
                                         <h6 class="text-muted">Agua</h6>
-                                        <h3 class="font-weight-bold">25.000</h3>
-                                        <h6 class="text-success"><i class="icon ion-md-arrow-dropup-circle"></i> 50%</h6>
+                                        <h3 class="font-weight-bold"><?php echo $resultado['monto_agua']?></h3>
+                                        <h6 class="text-success"><i class="icon ion-md-arrow-dropup-circle"></i><?php echo round((100*$resultado['monto_agua'])/$monto_total, 1)?>%</h6>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-6 d-flex stat my-3">
                                     <div class="mx-auto">
                                         <h6 class="text-muted">Gas</h6>
-                                        <h3 class="font-weight-bold">30.500</h3>
-                                        <h6 class="text-success"><i class="icon ion-md-arrow-dropup-circle"></i> 25%</h6>
+                                        <h3 class="font-weight-bold"><?php echo $resultado['monto_gas']?></h3>
+                                        <h6 class="text-success"><i class="icon ion-md-arrow-dropup-circle"></i><?php echo round((100*$resultado['monto_gas'])/$monto_total, 1)?>%</h6>
                                     </div>
                                     
                                 </div>
@@ -78,8 +86,8 @@
                                 <div class="col-lg-3 col-md-6 d-flex my-3">
                                     <div class="mx-auto">
                                         <h6 class="text-muted">Otros</h6>
-                                        <h3 class="font-weight-bold">33.000</h3>
-                                        <h6 class="text-success"><i class="icon ion-md-arrow-dropup-circle"></i> 16.60%</h6>
+                                        <h3 class="font-weight-bold"><?php echo $resultado['monto_otros']?></h3>
+                                        <h6 class="text-success"><i class="icon ion-md-arrow-dropup-circle"></i><?php echo round((100*$resultado['monto_otros'])/$monto_total, 1)?>%</h6>
                                     </div>
                                 </div>
                             </div>
@@ -213,14 +221,23 @@
 
                                     <div class="d-flex border-bottom py-2">
                                         <div class="d-flex mr-3">
-                                      
+                                       
                                         </div>
                                         <div class="align-self-center">
-                                        <h6 class="d-inline-block mb-0">Mayo</h6><span class="badge badge-warning ml-2">por pagar</span>
+                                          <h6 class="d-inline-block mb-0">Mayo</h6><span class="badge badge-success ml-2">gastos pagados</span>
                                           <small class="d-block text-muted">ver</small>
                                         </div>
                                     </div>
 
+                                    <div class="d-flex border-bottom py-2">
+                                        <div class="d-flex mr-3">
+                                      
+                                        </div>
+                                        <div class="align-self-center">
+                                        <h6 class="d-inline-block mb-0">Junio</h6><span class="badge badge-warning ml-2">por pagar</span>
+                                          <small class="d-block text-muted">ver</small>
+                                        </div>
+                                    </div>
                                    
                                     
                                     
@@ -241,9 +258,25 @@
                                          
                                         </div>
                                         <div class="align-self-center">
-                                        <h3 class="font-weight-bold">30 / mayo / 2021</h3>
-                                        <h6 class="d-inline-block mb-0"></h6><span class="badge badge-warning ml-2">por pagar</span>
-                                         
+                                        <?php 
+                                        $fecha_entera=strtotime($resultado['fecha_limite']);
+                                        $fecha=date('d-m-Y',$fecha_entera);
+                                        ?>    
+                                        <h3 class="font-weight-bold"><?php echo $fecha?></h3>
+                                        <h6 class="d-inline-block mb-0"></h6>
+                                        <span class="badge badge-warning ml-2">
+                                            <?php 
+                                            echo $resultado['estado_pago'];
+                                            ?>
+                                        </span>
+                                        <br>
+                                        <h5>
+                                        <?php
+                                        $dia_limite=date('d',$fecha_entera);
+                                        $dia_actual=date('d')-1;
+                                        echo "Dias disponible para pago: ".($dia_limite-$dia_actual);
+                                        ?>
+                                        </h5> 
                                         </div>
                                     </div>
 

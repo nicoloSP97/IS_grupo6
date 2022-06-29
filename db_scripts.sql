@@ -36,3 +36,20 @@ CREATE TABLE condominio( id_condominio int, PRIMARY KEY (id_condominio) );
 extras:
 ALTER TABLE departamento add id_condominio int;
 ALTER TABLE departamento ADD FOREIGN KEY (id_condominio) REFERENCES condominio(id_condominio);
+INSERT INTO condominio values('01');
+UPDATE departamento set id_condominio=1 where estado_depa='ocupado' or estado_depa='desocupado';
+
+administrador:
+INSERT INTO usuario values('admin','admin','pass',11,'admin');
+
+creacion tabla gasto_comun
+CREATE TABLE gasto_comun ( cod_gasto int, fecha_limite date, monto_luz int, monto_agua int, monto_gas int, monto_otros int, primary key (cod_gasto) );
+tuplas de tabla gasto_comun
+insert into gasto_comun VALUES (11,"30/06/2022",16000,25000,30500,33000);
+insert into gasto_comun VALUES (12,"30/06/2022",16000,25000,30500,33000);
+insert into gasto_comun VALUES (13,"30/06/2022",16000,25000,30500,33000);
+
+tabla pago gastos
+CREATE table pago_gasto( id_depa int, cod_gasto int, estado_pago varchar(20), FOREIGN KEY (id_depa) REFERENCES departamento(id_depa), FOREIGN KEY (cod_gasto) REFERENCES gasto_comun(cod_gasto) );
+
+INSERT INTO pago_gasto VALUES(101,11,'por pagar');

@@ -8,7 +8,7 @@ $pass=$_POST['contrasena'];
 $cod_arrendatario=22;
 $q1 = "SELECT * from usuario where rut ='$rut'";
 $consulta=mysqli_query($con,$q1);
-$q2="SELECT * FROM departamento where id_depa= $id_depto and estado_depa='desocupado'";
+$q2="SELECT * FROM departamento where id_depa= $id_depto and estado_depa='disponible'";
 $consulta2=mysqli_query($con,$q2);
 $fila=mysqli_num_rows($consulta);
 $fila2=mysqli_num_rows($consulta2);
