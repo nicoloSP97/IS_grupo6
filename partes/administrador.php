@@ -29,6 +29,15 @@
                             <div class="col-lg-3 col-md-4 d-flex">
                                 <button class="btn btn-primary w-100 align-self-center">Fechas por vencer</button>
                             </div>
+                            <div class="col-lg-3 col-md-4 d-flex">
+                                <button class="btn btn-primary w-100 align-self-center">Agregar Gasto Común</button>
+                            </div>
+                            <div class="col-lg-3 col-md-4 d-flex">
+                                <button class="btn btn-primary w-100 align-self-center">Modificar Gasto Común</button>
+                            </div>
+                            <div class="col-lg-3 col-md-4 d-flex">
+                                <button class="btn btn-primary w-100 align-self-center">Eliminar Gasto Común</button>
+                            </div>
                         </div>
                         <div class="align-self-center">
                                           <h6 class="d-inline-block mb-0">formato </h6><span class="badge badge-info ml-2">detalles generales</span>

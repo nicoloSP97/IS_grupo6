@@ -7,13 +7,16 @@
  $reg = mysqli_fetch_array($consultaRegistro);
  $nombre=$reg['nombre'];
  $id_depa=$reg['id_depa'];
+ $mes_act=date('m');
 //consulta sobre detalles de gasto
 $consultadetallesSql= "SELECT * FROM departamento d, pago_gasto p, gasto_comun g
-where d.id_depa=$id_depa and d.id_depa=p.id_depa and p.cod_gasto=g.cod_gasto";
+where d.id_depa=$id_depa and d.id_depa=p.id_depa and p.cod_gasto=g.cod_gasto and EXTRACT(MONTH FROM g.fecha_limite)=$mes_act";
+
 $consultadetalles=mysqli_query($con,$consultadetallesSql);
 $resultado=mysqli_fetch_array($consultadetalles);
 
 $monto_total = $resultado['monto_luz'] + $resultado['monto_agua'] + $resultado['monto_gas'] + $resultado['monto_otros'];
+
 ?>
  
  <!-- head -->
@@ -21,7 +24,8 @@ $monto_total = $resultado['monto_luz'] + $resultado['monto_agua'] + $resultado['
     <!-- fin head -->
 
 
-<body>   
+<body>
+
 <div class="d-flex" id="content-wrapper">
     <!-- sideBar -->
     <?php include('../partes/sidebar.php') ?>
@@ -41,8 +45,8 @@ $monto_total = $resultado['monto_luz'] + $resultado['monto_agua'] + $resultado['
                         <div class="row">
                             <div class="col-lg-9 col-md-8">
                                 <h1 class="font-weight-bold mb-0">Bienvenido <?php echo $nombre ?></h1>
+                                <h2><?php echo $resultado['fecha_limite']?></h2>
                                 <h2 class="font-weight-bold mb-0">Dpto N° <?php echo $id_depa?></h2>
-                                <h3><?php echo "fdsa"?></h3>
                                 <p class="lead text-muted">Revisa la última información</p>
                             </div>
                             <div class="col-lg-3 col-md-4 d-flex">
@@ -115,7 +119,7 @@ $monto_total = $resultado['monto_luz'] + $resultado['monto_agua'] + $resultado['
                                         <div class="align-self-center">
                                         <h6 class="text-muted">luz</h6>
                                             
-                                        <p class="lead text-muted">16.000</p>
+                                        <p class="lead text-muted"><?php echo $resultado['monto_luz']?></p>
                                           
                                         </div>
                                     </div>
@@ -127,7 +131,7 @@ $monto_total = $resultado['monto_luz'] + $resultado['monto_agua'] + $resultado['
                                         <div class="align-self-center">
                                         <h6 class="text-muted">Agua</h6>
                                             
-                                        <p class="lead text-muted">25.000</p>
+                                        <p class="lead text-muted"><?php echo $resultado['monto_agua']?></p>
                                           
                                         </div>
                                     </div>
@@ -139,7 +143,7 @@ $monto_total = $resultado['monto_luz'] + $resultado['monto_agua'] + $resultado['
                                         <div class="align-self-center">
                                         <h6 class="text-muted">Gas</h6>
                                             
-                                        <p class="lead text-muted">30.500</p>
+                                        <p class="lead text-muted"><?php echo $resultado['monto_gas']?></p>
                                           
                                         </div>
                                     </div>
@@ -151,7 +155,7 @@ $monto_total = $resultado['monto_luz'] + $resultado['monto_agua'] + $resultado['
                                         <div class="align-self-center">
                                         <h6 class="text-muted">Otros</h6>
                                             
-                                        <p class="lead text-muted">33.000</p>
+                                        <p class="lead text-muted"><?php echo $resultado['monto_otros']?></p>
                                           
                                         </div>
                                     </div>
@@ -161,7 +165,7 @@ $monto_total = $resultado['monto_luz'] + $resultado['monto_agua'] + $resultado['
                                         </div>
                                         <div class="align-self-center">
                                         <h6 class="text-muted">Total</h6>
-                                        <h3 class="font-weight-bold">104.000</h3>
+                                        <h3 class="font-weight-bold"><?php echo $monto_total?></h3>
                                         <span class="badge badge-success ml-2" >total a pagar</span>
                                           <br>
                                         </div>
@@ -179,73 +183,56 @@ $monto_total = $resultado['monto_luz'] + $resultado['monto_agua'] + $resultado['
                                 <div class="card-header bg-light">
                                     <h6 class="font-weight-bold mb-0">gastos pagados mensualmente</h6>
                                 </div>
-                                <div class="card-body pt-2">
-                                    <div class="d-flex border-bottom py-2">
-                                        <div class="d-flex mr-3">
-                                         
-                                        </div>
-                                        <div class="align-self-center">
-                                        <h6 class="d-inline-block mb-0">Enero</h6><span class="badge badge-success ml-2">gastos pagados</span>
-                                          <small class="d-block text-muted">ver</small>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex border-bottom py-2">
-                                        <div class="d-flex mr-3">
-                                          
-                                        </div>
-                                        <div class="align-self-center">
-                                          <h6 class="d-inline-block mb-0">Febrero</h6><span class="badge badge-success ml-2">gastos pagados</span>
-                                          <small class="d-block text-muted">ver</small>
-                                        </div>
-                                    </div>
+                                <div class="card-body pt-2">   
+                                    
+                                   
+                                   <?php
+                                   $consultadetallesSql= "SELECT * FROM departamento d, pago_gasto p, gasto_comun g
+                                   where d.id_depa=$id_depa and d.id_depa=p.id_depa and p.cod_gasto=g.cod_gasto";
+                                   $consultadetalles=mysqli_query($con,$consultadetallesSql);
 
-                                    <div class="d-flex border-bottom py-2">
-                                        <div class="d-flex mr-3">
-                                          
-                                        </div>
-                                        <div class="align-self-center">
-                                          <h6 class="d-inline-block mb-0">Marzo</h6><span class="badge badge-success ml-2">gastos pagados</span>
-                                          <small class="d-block text-muted">ver</small>
-                                        </div>
-                                    </div>
+                                   while($fila_historial_pago=mysqli_fetch_array($consultadetalles)){
+                                    $fecha_entera=strtotime($fila_historial_pago['fecha_limite']);
+                                    $fecha=date('d-m-Y',$fecha_entera);
+                                    $mes_limite=date('m',$fecha_entera);
+                                    
 
-                                    <div class="d-flex border-bottom py-2">
+                                    if($fila_historial_pago['estado_pago'] == 'pagado'){
+                                   ?>
+                                   <div class="d-flex border-bottom py-2">
                                         <div class="d-flex mr-3">
                                        
                                         </div>
                                         <div class="align-self-center">
-                                          <h6 class="d-inline-block mb-0">Abril</h6><span class="badge badge-success ml-2">gastos pagados</span>
+                                          <h6 class="d-inline-block mb-0"><?php nombre_mes($mes_limite)?></h6><span class="badge badge-success ml-2">gastos <?php echo $fila_historial_pago['estado_pago']?></span>
                                           <small class="d-block text-muted">ver</small>
                                         </div>
                                     </div>
-
-                                    <div class="d-flex border-bottom py-2">
-                                        <div class="d-flex mr-3">
-                                       
-                                        </div>
-                                        <div class="align-self-center">
-                                          <h6 class="d-inline-block mb-0">Mayo</h6><span class="badge badge-success ml-2">gastos pagados</span>
-                                          <small class="d-block text-muted">ver</small>
-                                        </div>
-                                    </div>
-
+                                   <?php 
+                                   }
+                                   else{
+                                    ?>
                                     <div class="d-flex border-bottom py-2">
                                         <div class="d-flex mr-3">
                                       
                                         </div>
                                         <div class="align-self-center">
-                                        <h6 class="d-inline-block mb-0">Junio</h6><span class="badge badge-warning ml-2">por pagar</span>
+                                        <h6 class="d-inline-block mb-0"><?php nombre_mes($mes_limite)?></h6><span class="badge badge-warning ml-2"><?php echo $fila_historial_pago['estado_pago']?></span>
                                           <small class="d-block text-muted">ver</small>
                                         </div>
                                     </div>
+                                    <?php
+                                   }
+                                   }
                                    
+                                   ?>
                                     
                                     
                                     <button class="btn btn-primary w-100">Ver Mas</button>
                                 </div>
                             </div>
 
-                            <!-- fecha limite de pago-->
+                            <!-- fecha limite de pago, Historia de Usurario -->
                             </div>
                             <div class="col-lg-4 my-3">
                             <div class="card rounded-0">
@@ -264,7 +251,7 @@ $monto_total = $resultado['monto_luz'] + $resultado['monto_agua'] + $resultado['
                                         ?>    
                                         <h3 class="font-weight-bold"><?php echo $fecha?></h3>
                                         <h6 class="d-inline-block mb-0"></h6>
-                                        <span class="badge badge-warning ml-2">
+                                        <span class="badge badge-success ml-2">
                                             <?php 
                                             echo $resultado['estado_pago'];
                                             ?>
@@ -353,3 +340,50 @@ $monto_total = $resultado['monto_luz'] + $resultado['monto_agua'] + $resultado['
 </body>
 
 </html>
+
+
+<?php
+
+
+function nombre_mes($numero){
+    switch($numero){
+        case 1:
+            echo "Enero";
+            break;
+        case 2:
+            echo "Febrero";
+            break;
+        case 3:
+            echo "Marzo";
+            break;
+        case 4:
+            echo "Abril";
+            break;  
+        case 5:
+            echo "Mayo";
+            break;  
+        case 6:
+            echo "Junio";
+            break;  
+        case 7:
+            echo "Julio";
+            break;  
+        case 8:
+            echo "Agosto";
+            break;
+        case 9:
+            echo "Septiembre";
+            break;
+        case 10:
+            echo "Octubre";
+            break;
+        case 11:
+            echo "Noviembre";
+            break;
+        case 12:
+            echo "Diciembre";
+            break;                                            
+    }
+}
+
+?>
