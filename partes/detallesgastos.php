@@ -306,7 +306,6 @@ $monto_total = $resultado['monto_luz'] + $resultado['monto_agua'] + $resultado['
                                     <canvas id="myChart" width="300" height="150"></canvas>
                                   </div>
                               </div>
-
                       </div>
                       </div>
                       
