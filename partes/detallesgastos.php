@@ -251,16 +251,41 @@ $monto_total = $resultado['monto_luz'] + $resultado['monto_agua'] + $resultado['
                                         ?>    
                                         <h3 class="font-weight-bold"><?php echo $fecha?></h3>
                                         <h6 class="d-inline-block mb-0"></h6>
+                                        <?php
+                                        if($resultado['estado_pago']=='por pagar'){
+                                        ?>
+                                        <span class="badge badge-warning ml-2">
+                                            <?php 
+                                            echo $resultado['estado_pago'];
+                                            ?>
+                                        </span>
+                                        <?php
+                                        }
+                                        else if($resultado['estado_pago']=='pagado'){
+                                        ?>
                                         <span class="badge badge-success ml-2">
                                             <?php 
                                             echo $resultado['estado_pago'];
                                             ?>
                                         </span>
+                                        <?php            
+                                        }
+                                        else{
+                                            ?>
+                                            <span class="badge badge-danger ml-2">
+                                                <?php 
+                                                echo $resultado['estado_pago'];
+                                                ?>
+                                            </span>
+                                            <?php    
+                                        }
+                                        ?>
+                                        
                                         <br>
                                         <h5>
                                         <?php
                                         $dia_limite=date('d',$fecha_entera);
-                                        $dia_actual=date('d')-1;
+                                        $dia_actual=date('d');
                                         echo "Dias disponible para pago: ".($dia_limite-$dia_actual);
                                         ?>
                                         </h5> 
