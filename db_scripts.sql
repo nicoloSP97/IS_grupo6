@@ -45,9 +45,13 @@ INSERT INTO usuario values('admin','admin','pass',11,'admin');
 creacion tabla gasto_comun
 CREATE TABLE gasto_comun ( cod_gasto int, fecha_limite date, monto_luz int, monto_agua int, monto_gas int, monto_otros int, primary key (cod_gasto) );
 tuplas de tabla gasto_comun
+insert into gasto_comun VALUES (10101,"30/01/2022",16000,25000,30500,33000);
+insert into gasto_comun VALUES (10102,"28/02/2022",16000,25000,30500,33000);
+insert into gasto_comun VALUES (10103,"30/03/2022",16000,25000,30500,33000);
+insert into gasto_comun VALUES (10104,"30/04/2022",16000,25000,30500,33000);
+insert into gasto_comun VALUES (10105,"30/05/2022",16000,25000,30500,33000);
 insert into gasto_comun VALUES (10106,"30/06/2022",16000,25000,30500,33000);
-insert into gasto_comun VALUES (12,"30/06/2022",16000,25000,30500,33000);
-insert into gasto_comun VALUES (13,"30/06/2022",16000,25000,30500,33000);
+insert into gasto_comun VALUES (10107,"30/07/2022",16000,25000,30500,33000);
 
 insert into gasto_comun VALUES (10201,"30/06/2022",11000,25000,30500,33000);
 insert into gasto_comun VALUES (10202,"30/06/2022",12000,25000,30500,33000);
@@ -90,7 +94,8 @@ INSERT INTO pago_gasto VALUES(101,10103,'pagado');
 INSERT INTO pago_gasto VALUES(101,10104,'pagado');
 INSERT INTO pago_gasto VALUES(101,10105,'pagado');
 INSERT INTO pago_gasto VALUES(101,10106,'pagado');
-INSERT INTO pago_gasto VALUES(101,10107,'por pagar');
+INSERT INTO pago_gasto VALUES(101,10107,'no pago');
+INSERT INTO pago_gasto VALUES(101,10108,'no pago');
 
 INSERT INTO pago_gasto VALUES(102,10201,'pagado');
 INSERT INTO pago_gasto VALUES(102,10202,'pagado');
@@ -98,7 +103,8 @@ INSERT INTO pago_gasto VALUES(102,10203,'pagado');
 INSERT INTO pago_gasto VALUES(102,10204,'pagado');
 INSERT INTO pago_gasto VALUES(102,10205,'pagado');
 INSERT INTO pago_gasto VALUES(102,10206,'pagado');
-INSERT INTO pago_gasto VALUES(102,10207,'por pagar');
+INSERT INTO pago_gasto VALUES(102,10207,'no pago');
+INSERT INTO pago_gasto VALUES(102,10208,'no pago');
 
 INSERT INTO pago_gasto VALUES(201,20101,'pagado');
 INSERT INTO pago_gasto VALUES(201,20102,'pagado');
@@ -106,7 +112,8 @@ INSERT INTO pago_gasto VALUES(201,20103,'pagado');
 INSERT INTO pago_gasto VALUES(201,20104,'pagado');
 INSERT INTO pago_gasto VALUES(201,20105,'pagado');
 INSERT INTO pago_gasto VALUES(201,20106,'pagado');
-INSERT INTO pago_gasto VALUES(201,20107,'por pagar');
+INSERT INTO pago_gasto VALUES(201,20107,'pagado');
+INSERT INTO pago_gasto VALUES(201,20108,'por pagar');
 
 INSERT INTO pago_gasto VALUES(202,20201,'pagado');
 INSERT INTO pago_gasto VALUES(202,20202,'pagado');
@@ -114,7 +121,8 @@ INSERT INTO pago_gasto VALUES(202,20203,'pagado');
 INSERT INTO pago_gasto VALUES(202,20204,'pagado');
 INSERT INTO pago_gasto VALUES(202,20205,'pagado');
 INSERT INTO pago_gasto VALUES(202,20206,'pagado');
-INSERT INTO pago_gasto VALUES(202,20207,'por pagar');
+INSERT INTO pago_gasto VALUES(202,20207,'pagado');
+INSERT INTO pago_gasto VALUES(202,20208,'por pagar');
 
 INSERT INTO pago_gasto VALUES(301,30101,'pagado');
 INSERT INTO pago_gasto VALUES(301,30102,'pagado');
@@ -123,3 +131,4 @@ INSERT INTO pago_gasto VALUES(301,30104,'pagado');
 INSERT INTO pago_gasto VALUES(301,30105,'pagado');
 INSERT INTO pago_gasto VALUES(301,30106,'pagado');
 INSERT INTO pago_gasto VALUES(301,30107,'pagado');
+INSERT INTO pago_gasto VALUES(301,30108,'pagado');

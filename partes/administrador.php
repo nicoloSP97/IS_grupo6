@@ -46,6 +46,7 @@
                     </div>
                 </section>
 
+                <?php include("../bdd/consultas.php")?>
                 <section class="bg-mix py-3">
                 <div class="container">
                     <div class="card rounded-0">
@@ -54,7 +55,7 @@
                                 <div class="col-lg-3 col-md-6 d-flex stat my-3">
                                     <div class="mx-auto">
                                         <h6 class="text-muted">No han pagado </h6>
-                                        <h3 class="font-weight-bold">50 </h3>
+                                        <h3 class="font-weight-bold"><?php echo $filas_nopago['cantidad']?></h3>
                                         <h4>personas  <span class="badge badge-danger">No pago</span></h4>
                                         
                                     </div>
@@ -62,7 +63,7 @@
                                 <div class="col-lg-3 col-md-6 d-flex stat my-3">
                                     <div class="mx-auto">
                                         <h6 class="text-muted">Por Pagar </h6>
-                                        <h3 class="font-weight-bold">70 </h3>
+                                        <h3 class="font-weight-bold"><?php echo $filas_porpagar['cantidad']?></h3>
                                         <h4>personas  <span class="badge badge-warning">por pagar</span></h4>
 
                                     </div>
@@ -70,7 +71,7 @@
                                 <div class="col-lg-3 col-md-6 d-flex stat my-3">
                                     <div class="mx-auto">
                                         <h6 class="text-muted">al dia</h6>
-                                        <h3 class="font-weight-bold">70 </h3>
+                                        <h3 class="font-weight-bold"><?php echo $filas_pagados['cantidad']?> </h3>
                                         <h4>personas <span class="badge badge-success">pagado</span> </h4>
                                     </div>
                                     
@@ -81,7 +82,11 @@
                                         <h6></h6>
                                     <div>
                                     <h6 class="text-muted">fecha</h6>
-                                        <h1 class="font-weight">25-08-2022</h1>
+                                        <?php
+                                        $fecha_entera=strtotime(date("d-m-Y"));
+                                        $fecha_actual=date('d-m-Y',$fecha_entera);
+                                        ?>
+                                        <h1 class="font-weight"><?php echo $fecha_actual?></h1>
                                     </div>
                                         
                                     </div>
