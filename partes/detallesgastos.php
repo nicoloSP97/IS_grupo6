@@ -54,7 +54,24 @@ $monto_total = $resultado['monto_luz'] + $resultado['monto_agua'] + $resultado['
                             </div>
                         </div>
                         <div class="align-self-center">
-                                          <h6 class="d-inline-block mb-0">Estado de deudas</h6><span class="badge badge-warning ml-2"><?php echo $resultado['estado_pago']?></span>                           
+                        <h6 class="d-inline-block mb-0">Estado de deudas</h6>
+                                          <?php
+                                          if($resultado['estado_pago']=='por pagar'){
+                                          ?>  
+                                            <span class="badge badge-warning ml-2"><?php echo $resultado['estado_pago']?></span>
+                                          <?php  
+                                          }
+                                          else if($resultado['estado_pago']=='pagado'){
+                                          ?>
+                                          <span class="badge badge-success ml-2"><?php echo $resultado['estado_pago']?></span>
+                                          <?php  
+                                          }
+                                          else{
+                                          ?>  
+                                            <span class="badge badge-danger ml-2"><?php echo $resultado['estado_pago']?></span>
+                                          <?php  
+                                          }
+                                          ?>                           
                                         </div>
                     </div>
                 </section>
@@ -210,7 +227,7 @@ $monto_total = $resultado['monto_luz'] + $resultado['monto_agua'] + $resultado['
                                     </div>
                                    <?php 
                                    }
-                                   else{
+                                   else if ($fila_historial_pago['estado_pago']=='por pagar'){
                                     ?>
                                     <div class="d-flex border-bottom py-2">
                                         <div class="d-flex mr-3">
@@ -218,6 +235,19 @@ $monto_total = $resultado['monto_luz'] + $resultado['monto_agua'] + $resultado['
                                         </div>
                                         <div class="align-self-center">
                                         <h6 class="d-inline-block mb-0"><?php nombre_mes($mes_limite)?></h6><span class="badge badge-warning ml-2"><?php echo $fila_historial_pago['estado_pago']?></span>
+                                          <small class="d-block text-muted">ver</small>
+                                        </div>
+                                    </div>
+                                    <?php
+                                   }
+                                   else{
+                                    ?>
+                                    <div class="d-flex border-bottom py-2">
+                                        <div class="d-flex mr-3">
+                                      
+                                        </div>
+                                        <div class="align-self-center">
+                                        <h6 class="d-inline-block mb-0"><?php nombre_mes($mes_limite)?></h6><span class="badge badge-danger ml-2"><?php echo $fila_historial_pago['estado_pago']?></span>
                                           <small class="d-block text-muted">ver</small>
                                         </div>
                                     </div>
