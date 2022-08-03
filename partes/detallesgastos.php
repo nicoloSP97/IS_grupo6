@@ -45,7 +45,6 @@ $monto_total = $resultado['monto_luz'] + $resultado['monto_agua'] + $resultado['
                         <div class="row">
                             <div class="col-lg-9 col-md-8">
                                 <h1 class="font-weight-bold mb-0">Bienvenido <?php echo $nombre ?></h1>
-                                <h2><?php echo $resultado['fecha_limite']?></h2>
                                 <h2 class="font-weight-bold mb-0">Dpto N° <?php echo $id_depa?></h2>
                                 <p class="lead text-muted">Revisa la última información</p>
                             </div>
@@ -126,7 +125,7 @@ $monto_total = $resultado['monto_luz'] + $resultado['monto_agua'] + $resultado['
                           <div class="col-lg-4 my-3">
                             <div class="card rounded-0">
                                 <div class="card-header bg-light">
-                                    <h6 class="font-weight-bold mb-0">Pago mes Mayo</h6>
+                                    <h6 class="font-weight-bold mb-0">Pago mes Agosto</h6>
                                 </div>
                                 <div class="card-body pt-2">
                                 <div class="d-flex border-bottom py-2">
@@ -189,7 +188,8 @@ $monto_total = $resultado['monto_luz'] + $resultado['monto_agua'] + $resultado['
                                     </div>
                                     
                                     <br>
-                                    <button class="btn btn-primary w-100">Pagar</button>
+                                    <button onclick="location.href='pago_user.php'" class="btn btn-primary w-100">Pagar</button>
+                                    
                                 </div>
                             </div>
 
