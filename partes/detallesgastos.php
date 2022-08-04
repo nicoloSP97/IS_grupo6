@@ -201,12 +201,8 @@ $monto_total = $resultado['monto_luz'] + $resultado['monto_agua'] + $resultado['
                                     </div>
                                     
                                     <br>
-<<<<<<< HEAD
-                                    <button class="btn btn-primary w-100" onclick="location.href='pago.php'">Pagar</button>
-=======
                                     <button onclick="location.href='pago_user2.php'" class="btn btn-primary w-100">Pagar</button>
                                     
->>>>>>> nicolassilva
                                 </div>
                             </div>
 
