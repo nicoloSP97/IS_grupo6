@@ -240,11 +240,7 @@ $monto_total = $resultado['monto_luz'] + $resultado['monto_agua'] + $resultado['
                                     </div>
                                    <?php 
                                    }
-<<<<<<< HEAD
-                                   else if($fila_historial_pago['estado_pago'] == 'por pagar'){
-=======
                                    else if ($fila_historial_pago['estado_pago']=='por pagar'){
->>>>>>> nicolassilva
                                     ?>
                                     <div class="d-flex border-bottom py-2">
                                         <div class="d-flex mr-3">
