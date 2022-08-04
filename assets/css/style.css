@@ -178,4 +178,20 @@ a:hover {
   }
   .textoderecho{
       text-align: end;
+
+
+      
+  }
+
+
+  .colorluz{
+    width: 100%;
+    height: 40px;
+    background: #04415e;
+    background-color: #0189ab;
+    border: none;
+    color: rgb(162, 221, 24);
+  }
+  #luz{
+    background-color: yellow;
   }

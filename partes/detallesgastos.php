@@ -75,30 +75,39 @@ $monto_total = $resultado['monto_luz'] + $resultado['monto_agua'] + $resultado['
                     </div>
                 </section>
 
-                <section class="bg-mix py-3">
+                <section class="bg-mix py-3 colorluz">
                 <div class="container">
                     <div class="card rounded-0">
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-lg-3 col-md-6 d-flex stat my-3">
-                                    <div class="mx-auto">
+                                <div class="col-lg-3 col-md-6 d-flex stat my-3 prymary colorluz">
+                                    <div class="colorluz mx-auto ">
+                                        <span class="badge badge-warning ml-2">
                                         <h6 class="text-muted">Luz</h6>
-                                        <h3 class="font-weight-bold"><?php echo $resultado['monto_luz']?></h3>
+                                        <h3 class="font-weight-bold colorluz"><?php echo $resultado['monto_luz']?></h3>
                                         <h6 class="text-success"><i class="icon ion-md-arrow-dropup-circle"></i> <?php echo round((100*$resultado['monto_luz'])/$monto_total, 1)?>%</h6>
+                                        </span>
+                                        
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-6 d-flex stat my-3">
                                     <div class="mx-auto">
+                                        <span class="badge badge-success ml-2">
                                         <h6 class="text-muted">Agua</h6>
                                         <h3 class="font-weight-bold"><?php echo $resultado['monto_agua']?></h3>
                                         <h6 class="text-success"><i class="icon ion-md-arrow-dropup-circle"></i><?php echo round((100*$resultado['monto_agua'])/$monto_total, 1)?>%</h6>
+                                        </span>
+                                        
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-6 d-flex stat my-3">
-                                    <div class="mx-auto">
+                                    <div class="mx-auto" >
+                                        <span class="badge badge-danger ml-2">
                                         <h6 class="text-muted">Gas</h6>
                                         <h3 class="font-weight-bold"><?php echo $resultado['monto_gas']?></h3>
                                         <h6 class="text-success"><i class="icon ion-md-arrow-dropup-circle"></i><?php echo round((100*$resultado['monto_gas'])/$monto_total, 1)?>%</h6>
+                                        </span>
+                                        
                                     </div>
                                     
                                 </div>
@@ -188,7 +197,7 @@ $monto_total = $resultado['monto_luz'] + $resultado['monto_agua'] + $resultado['
                                     </div>
                                     
                                     <br>
-                                    <button onclick="location.href='pago_user.php'" class="btn btn-primary w-100">Pagar</button>
+                                    <button onclick="location.href='pago_user2.php'" class="btn btn-primary w-100">Pagar</button>
                                     
                                 </div>
                             </div>
