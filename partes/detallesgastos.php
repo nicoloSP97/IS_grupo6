@@ -53,11 +53,7 @@ $monto_total = $resultado['monto_luz'] + $resultado['monto_agua'] + $resultado['
                             </div>
                         </div>
                         <div class="align-self-center">
-<<<<<<< HEAD
-                                          <h6 class="d-inline-block mb-0">Estado de deudas</h6>
-=======
                         <h6 class="d-inline-block mb-0">Estado de deudas</h6>
->>>>>>> nicolassilva
                                           <?php
                                           if($resultado['estado_pago']=='por pagar'){
                                           ?>  
