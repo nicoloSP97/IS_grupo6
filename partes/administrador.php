@@ -33,7 +33,7 @@
                                 <button class="btn btn-primary w-100 align-self-center">Agregar Gasto Común</button>
                             </div>
                             <div class="col-lg-3 col-md-4 d-flex">
-                                <button class="btn btn-primary w-100 align-self-center">Modificar Gasto Común</button>
+                                <a href="../partes/modificarGasto.php"><button type="button" class="btn btn-primary w-100 align-self-center" >Modificar Gasto Común</button></a>
                             </div>
                             <div class="col-lg-3 col-md-4 d-flex">
                                 <button class="btn btn-primary w-100 align-self-center">Eliminar Gasto Común</button>

@@ -18,7 +18,7 @@
       <input class="buttons" type="submit" name="" value="Registrar">
       </form>
       
-      <p><a href="#">¿Olvidastes tu Contraseña?</a></p>
+      <p><a href="#">¿Olvidaste tu Contraseña?</a></p>
 
     </section>
 
