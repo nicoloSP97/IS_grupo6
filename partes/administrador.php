@@ -33,7 +33,9 @@
                                 <button class="btn btn-primary w-100 align-self-center">Agregar Gasto Común</button>
                             </div>
                             <div class="col-lg-3 col-md-4 d-flex">
-                                <a href="../partes/modificarGasto.php"><button type="button" class="btn btn-primary w-100 align-self-center" >Modificar Gasto Común</button></a>
+                                <a href="../partes/modificarGasto.php">
+                                    <button type="button" class="btn btn-primary w-100 align-self-center" >Modificar Gasto Común</button>
+                                </a>
                             </div>
                             <div class="col-lg-3 col-md-4 d-flex">
                                 <button class="btn btn-primary w-100 align-self-center">Eliminar Gasto Común</button>
@@ -209,7 +211,7 @@
                                     
                                     
  
-                                    <button class="btn btn-primary w-100">Ver Mas</button>
+                                    <a href="../partes/gastosGeneral.php"><button class="btn btn-primary w-100">Ver Más</button></a>
                                 </div>
                             </div>
 
